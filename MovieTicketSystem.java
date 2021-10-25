@@ -7,8 +7,8 @@ public class MovieTicketSystem
 		Movie m = new Movie();
 		Booking b[];
 		b = new Booking[5];
-		int k=1;
-		while(k<=5)
+		int k=0;
+		while(k<5)
 		{
 			System.out.println("Please select the option ");
 		    System.out.println("\n1. List Auditorium Name with Movie Name \n2. Book your seats \n3. List Booking \n4. Revenue By Audi \n5. Total Revenue");
@@ -28,16 +28,16 @@ public class MovieTicketSystem
             	    k++;
             	    break;
             	 case 3:
-            	     for(int l=0;l<=k;l++)
-            	     b[l].show();
+            	     for(int i=0;i<k;i++)
+            	     b[i].show();
             	     break;
 		         case 4:
-		        	 for(int i=0;i<=k;i++)
+		        	 for(int i=0;i<k;i++)
 	            	     b[i].audiRev();
 	            	     break;
 		         case 5:
 		        	 int totalRev = 0;
-		        	 for(int i=0;i<=k;i++)
+		        	 for(int i=0;i<k;i++)
 		        	 {
 		        		 totalRev += b[i].audiTotal();
 		        	 }
@@ -47,9 +47,7 @@ public class MovieTicketSystem
 
 		         default:
 		            	 System.out.println("You Press the Wrong Input");
-		            	 break;
-	            	  
-            	 
+		            	 break;	            	            	 
     		}
 		}
 	    
